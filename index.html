@@ -11,6 +11,19 @@
     <!-- Bootstrap + JohnDoe main styles -->
 	<link rel="stylesheet" href="assets/css/johndoe.css">
 </head>
+<script>
+    function downloadCV() {
+
+        var filePath = './assets/files/cv.pdf';
+        
+
+        var link = document.createElement('a');
+        link.href = filePath;
+        link.download = 'cv.pdf'; 
+        link.click();
+    }
+    </script>
+     
 
     <header class="header">
         <div class="container">
@@ -53,7 +66,7 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
-                    
+
                     <li class="nav-item last-item">
                         <a href="#contact" class="nav-link">Contact</a>
                     </li>
@@ -66,9 +79,10 @@
             <div class="col-lg-4 about-card">
                 <h3 class="font-weight-light">Who am I ?</h3>
                 <span class="line mb-5"></span>
-                <h5 class="mb-3">A Man With No Goals</h5>
-                <p class="mt-20">Myself Kabil Preetham and Im from India. Doing my UG @ Panimalar Engineering College. Knowledge in computer science is my passion.</p>
-                <button class="btn btn-outline-danger"><i class="icon-down-circled2 "></i>Download My CV</button>
+                
+                <p class="mt-20">
+                    I am Kabil Preetham K, a dynamic computer science enthusiast currently pursuing a Bachelor of Engineering in Computer Science. With an unquenchable passion for innovation, I am on a relentless quest to explore and advance the boundaries of technology. My expertise shines as a specialist in Penetration Testing, employing these skills to fortify the digital world's security. My journey in computer science has led to the creation of numerous projects harnessing the power of machine learning and artificial intelligence, seamlessly integrating these technologies into the realm of cybersecurity. With an intermediate-level proficiency in networking, I am continuously expanding my skill set to navigate the intricacies of the digital realm. As a fervent inventor and research-aspiring scientist, I am on an inspiring path to drive the future of technology forward, one innovation at a time. I am the Founder and CEO of Ogrelix.</p>
+                    <button class="btn btn-outline-danger" onclick=downloadCV()><i class="icon-down-circled2 "></i>Download My CV</button>
             </div>
             <div class="col-lg-4 about-card">
                 <h3 class="font-weight-light">Personal Info</h3>
@@ -113,6 +127,23 @@
                         <hr>
                     </div>
                 </div>
+                <div class="row">
+
+                    <div class="col-10 ml-auto mr-3">
+                        <h6>TubeLearns</h6>
+                        <p class="subtitle">TubeLearns is a Python script designed for extracting and cleaning YouTube video transcripts for preprocessing in machine learning. </p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-10 ml-auto mr-3">
+                        <h6>PassivePass</h6>
+                        <p class="subtitle">PassivePass is a powerful password wordlist generator developed with Python, offering a user-friendly graphical user interface (GUI) to streamline the process of enhancing password auditing and penetration testing activities. 
+                        </p>
+                        <hr>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -122,7 +153,7 @@
         <div class="container">
             <h2 class="mb-5"><span class="text-danger">My</span> Resume</h2>
             <div class="row">
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card">
                        <div class="card-header">
                             <div class="mt-2">
@@ -131,14 +162,18 @@
                             </div>
                         </div>
                         <div class="card-body">
+                            <h6 class="title text-danger">2024 - Present </h6>
+                            <p>Founder and CEO</p>
+                            <p class="subtitle">Visionary Founder at Ogrelix Solutions, spearheading the creation of innovative solutions in AI, Networking, Cloud, Software, IoT, and Cybersecurity. Focused on building a transformative future through entrepreneurial leadership and strategic initiatives.</p>
+                        </div>
+                        <div class="card-body">
                             <h6 class="title text-danger">2023 </h6>
-                            <P>Networking / Penetration testing</P>
-                            <P class="subtitle">Attended 1 month of Internship @Gold coast It soulitions.Analysed Networking structure & configurations(Load balancer , firewall , switch , routing ).Performed vulnerability analysis.</P>
-
+                            <p>Networking / Penetration testing</p>
+                            <p class="subtitle">Attended 1 month of Internship @Gold coast It soulitions.Analysed Networking structure & configurations(Load balancer , firewall , switch , routing ).Performed vulnerability analysis.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card">
                        <div class="card-header">
                             <div class="mt-2">
@@ -147,7 +182,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <h6 class="title text-danger">2023 - Present</h6>
+                            <h6 class="title text-danger">2022 - Present</h6>
                             <P>B.E Computer science Engineering</P>
                             <P class="subtitle">Under graduating at Panimalar Engineering College..</P>
                             <hr>
@@ -272,23 +307,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <div class="contact-form-card">
-                        <h4 class="contact-title">Send a message</h4>
-                        <form action="">
-                            <div class="form-group">
-                                <input  class="form-control" type="text" placeholder="Name *" required>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" type="email" placeholder="Email *" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" id=" placeholder="Message *" rows="7" required></textarea>
-                            </div>
-                            <div class="form-group ">
-                                <button type="submit" class="form-control btn btn-primary" >Send Message</button>
-                            </div>
-                        </form>
-                    </div>
+                    <h2>Contact Us</h2>
+                    <p>We would love to hear from you! Feel free to reach out to us using the contact information provided below.</p>
+                    <form action="#" method="post" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
                 </div>
                 <div class="col-lg-4">
                     <div class="contact-info-card">
@@ -306,7 +341,7 @@
                                 <i class="ti-map-alt icon-md"></i>
                             </div>
                             <div class="col-10">
-                                <h6 class="d-inline">Address :<br> <span class="text-muted">Somewhre in chennai</span></h6>
+                                <h6 class="d-inline">Address :<br> <span class="text-muted">Somewhere in Chennai</span></h6>
                             </div>
                         </div>
                         <div class="row mb-2">
@@ -320,19 +355,18 @@
                         <ul class="social-icons pt-4">
                             <li class="social-item"><a class="social-link text-dark" href="https://www.facebook.com/kabilpreetham/"><i class="ti-facebook" aria-hidden="true" ></i></a></li>
                             <li class="social-item"><a class="social-link text-dark" href="https://twitter.com/Kabil_Preetham"><i class="ti-twitter" aria-hidden="true"></i></a></li>
-
                             <li class="social-item"><a class="social-link text-dark" href="https://github.com/KabilPreethamK"><i class="ti-github" aria-hidden="true"></i></a></li>
                         </ul> 
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
+    
     <footer class="footer py-3">
         <div class="container">
             <p class="small mb-0 text-light">
-                &copy; <script>document.write(new Date().getFullYear())</script> Created With <i class="ti-heart text-danger"></i> By <a href="http://devcrud.com" target="_blank"><span class="text-danger" title="Bootstrap 4 Themes and Dashboards">DevCRUD</span></a> 
+                &copy; <script>document.write(new Date().getFullYear())</script> Created With  By <a href="https://ogrelix.org" target="_blank"><span class="text-danger" title="Bootstrap 4 Themes and Dashboards">Ogrelix</span></a> 
             </p>
         </div>
     </footer>
@@ -348,7 +382,6 @@
     <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
     
     <!-- Google mpas -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap"></script>
 
     <!-- JohnDoe js -->
     <script src="assets/js/johndoe.js"></script>
